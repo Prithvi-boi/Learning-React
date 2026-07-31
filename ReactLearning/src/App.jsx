@@ -2,6 +2,7 @@ import { useState, useRef } from "react"
 import { useConsoleLogger, useToggle } from "./customHooks"
 import { useSelector, useDispatch } from "react-redux"
 import { currentDate } from "./slices/dateSlice"
+import { increase, decrease } from "./slices/counterSlice"
 
 function App() {
   const [value, setvalue] = useState('')
@@ -12,7 +13,10 @@ function App() {
   const [bgColortoggle, settoggle] = useToggle()
 
   const date = useSelector((state) => state.dateSliceKey.value);
-  const dateDispatch = useDispatch()
+  
+  const count = useSelector((state) => state.counterSlicekey.value)
+  const Dispatch = useDispatch()
+  
   return (
     <>
       <h1 className="h-10 bg-black text-white">Learning React js</h1>
@@ -24,7 +28,13 @@ function App() {
 
       <div className="text-white">
         {date}
-        <button onClick={() => dateDispatch(currentDate())} className="bg-blue-500"> current date</button>
+        <button onClick={() => Dispatch(currentDate())} className="bg-blue-500"> current date</button>
+      </div>
+
+      <div>
+        <p>count : {count}</p>
+        <button onClick={()=> Dispatch(increase())}>Increase</button>
+        <button onClick={()=> Dispatch(decrease())}>Decrease</button>
       </div>
     </>
   )

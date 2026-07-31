@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+*{
+    color: white;
+}
+
+button{
+    padding: 10px;
+    border: 2px white solid;
+}
+
 body{
     background-color: rgb(1, 1, 51);
     margin: 10px;

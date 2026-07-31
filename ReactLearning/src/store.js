@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import dateSlice from './slices/dateSlice'
+import counterReducer from './slices/counterSlice'
 
 
 const store = configureStore({
   reducer: {
-    dateSliceKey : dateSlice
+    dateSliceKey : dateSlice,
+    counterSlicekey: counterReducer
   },
 })
 export default store
