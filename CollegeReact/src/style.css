@@ -1,1 +1,8 @@
-@import "tailwindcss";
+
+.card {
+  background: yellow;
+}
+
+.card{
+  background: blue;
+}
