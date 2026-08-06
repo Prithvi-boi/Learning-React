@@ -2,3 +2,4 @@
 - 28-07-2026 : Learn to create custom hooks like useToggle and useConsoleLogger
 - 29-07-2026 : Better use of useRef and some tips
 - 31-07-2026 : Created a counter slice with Redux
+- 06-08-2026 : learn how to implement css module file 
