@@ -1,8 +1,11 @@
+import CustomHooks from "./customHooks"
+
 
 function App() {
+
   return (
     <div>
-      Hello World
+      <CustomHooks />
     </div>
   )
 }
